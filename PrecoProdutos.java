@@ -1,10 +1,10 @@
-public class ProdutoEstoque
+public class PrecoProdutos
 {
     private String nome;
     private float valor;
     private int quantidade;
 
-    public ProdutoEstoque(String nome, float valor, int quantidade)
+    public PrecoProdutos(String nome, float valor, int quantidade)
     {
         this.nome = nome;
         this.valor = valor;

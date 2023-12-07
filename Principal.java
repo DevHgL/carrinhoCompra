@@ -3,10 +3,10 @@ public class Principal
     public static void main(String[] args) 
     {
         EstoqueProdutos estoque = new EstoqueProdutos();
-        estoque.adicionaProduto(new ProdutoEstoque("monitor", 1_450, 20));
-        estoque.adicionaProduto(new ProdutoEstoque("telefone", 3_000, 300));
-        estoque.adicionaProduto(new ProdutoEstoque("teclado", 400, 50));
-        estoque.adicionaProduto(new ProdutoEstoque("mouse", 350, 50));
+        estoque.adicionaProduto(new PrecoProdutos("monitor", 1_450, 20));
+        estoque.adicionaProduto(new PrecoProdutos("telefone", 3_000, 300));
+        estoque.adicionaProduto(new PrecoProdutos("teclado", 400, 50));
+        estoque.adicionaProduto(new PrecoProdutos("mouse", 350, 50));
         
         CarrinhoCompra carrinho = new CarrinhoCompra(estoque);
         carrinho.adicionaItem("monitor", 2);

@@ -1,19 +1,19 @@
 public class CarrinhoCompra
 {
-    private ProdutoEstoque[] carrinho;
+    private PrecoProdutos[] carrinho;
     private int quantidadeItens;
     private EstoqueProdutos estoque;
 
     public CarrinhoCompra(EstoqueProdutos estoque)
     {
-        carrinho = new ProdutoEstoque[100];
+        carrinho = new PrecoProdutos[100];
         quantidadeItens = 0;
         this.estoque = estoque;
     }
 
     public void adicionaItem(String nomeProduto, int quantidade)
     {
-        ProdutoEstoque produto = encontraProdutoNoEstoque(nomeProduto);
+        PrecoProdutos produto = encontraProdutoNoEstoque(nomeProduto);
         if(produto != null)
         {
             if(quantidade <= produto.getQuantidade())
@@ -36,7 +36,7 @@ public class CarrinhoCompra
         }
     }
 
-    private ProdutoEstoque encontraProdutoNoEstoque(String nomeProduto)
+    private PrecoProdutos encontraProdutoNoEstoque(String nomeProduto)
     {
         for(int i = 0; i < estoque.getQuantidadeProdutos(); i++)
         {
@@ -52,17 +52,17 @@ public class CarrinhoCompra
     {
         for(int i = 0; i < quantidadeItens; i++)
         {
-            ProdutoEstoque item = carrinho[i];
+            PrecoProdutos item = carrinho[i];
             item.setQuantidade(item.getQuantidade() - 1);
         }
-        carrinho = new ProdutoEstoque[100];
+        carrinho = new PrecoProdutos[100];
         quantidadeItens = 0;
     }
 
     public float calculaTotal()
     {
         float total = 0;
-        ProdutoEstoque item;
+        PrecoProdutos item;
         for(int i = 0; i < quantidadeItens; i++)
         {
             item = carrinho[i];

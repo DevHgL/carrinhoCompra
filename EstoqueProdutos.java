@@ -1,15 +1,15 @@
 public class EstoqueProdutos
 {
-    private ProdutoEstoque[] produtos;
+    private PrecoProdutos[] produtos;
     private int quantidadeProdutos;
 
     public EstoqueProdutos()
     {
-        produtos = new ProdutoEstoque[100];
+        produtos = new PrecoProdutos[100];
         quantidadeProdutos = 0;
     }
 
-    public void adicionaProduto(ProdutoEstoque produto)
+    public void adicionaProduto(PrecoProdutos produto)
     {
         if(quantidadeProdutos < produtos.length)
         {
@@ -22,7 +22,7 @@ public class EstoqueProdutos
         }
     }
 
-    public ProdutoEstoque getProduto(int indice)
+    public PrecoProdutos getProduto(int indice)
     {
         if(indice >= 0 && indice < quantidadeProdutos)
         {
